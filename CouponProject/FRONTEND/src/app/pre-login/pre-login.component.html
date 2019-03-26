@@ -1,0 +1,24 @@
+<div id="Page">
+
+    <app-login id="Login" *ngIf="!isViewRegistrationForm"></app-login>
+
+    <div id="SignUpOpt" *ngIf="!isViewRegistrationForm">
+    
+        <br>
+    
+        Don't have an account yet?
+        <button id="SignUpButton" class="btn btn-primary" (click)="isViewRegistrationForm = true">Sign-up</button>
+    
+    </div>
+    
+    <app-registration *ngIf="isViewRegistrationForm"></app-registration>
+    
+    <br> 
+    
+    <button id="BackButton" class="btn btn-primary" *ngIf="isViewRegistrationForm" (click)="isViewRegistrationForm = false">Back</button>
+    
+</div>
+   
+
+
+

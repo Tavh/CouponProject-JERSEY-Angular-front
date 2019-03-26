@@ -1,0 +1,10 @@
+enum CouponType {
+
+    RESTRAUNT,
+	ELECTRICITY,
+	VACATION, 
+	GIFT, 
+	SUPERMARKET, 
+	VIDEO, 
+	INTERNET
+}

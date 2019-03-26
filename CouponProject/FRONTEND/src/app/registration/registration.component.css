@@ -1,0 +1,66 @@
+#TypeSelection {
+    padding: 1px;
+}
+
+#CheckAvailability {
+    position: absolute;
+}
+
+.YellowAssertion {
+    background:lightgoldenrodyellow;
+    color:sienna;
+    padding:1px;
+}
+
+.RedAssertion {
+    background:pink;
+    color:red;
+    padding:1px;
+}
+
+
+#SignUpButton {
+    background-color: rgb(102, 102, 102);
+    color: white;
+    padding: 9px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#SignUpButton:hover {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    padding: 9px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#SignUpButton:disabled {
+    background-color: rgb(160, 160, 160);
+    color: white;
+    padding: 9px;
+    font-size: 16px;
+    border: none;
+    cursor: context-menu;
+}
+
+
+.AvailabilityButtons {
+    background-color: rgb(102, 102, 102);
+    color: white;
+    padding: 6px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.AvailabilityButtons:hover {
+    background-color: rgb(51, 51, 51);
+}
+
+.AvailabilityButtons:disabled {
+    background-color: rgb(160, 160, 160);
+    cursor: context-menu;
+}

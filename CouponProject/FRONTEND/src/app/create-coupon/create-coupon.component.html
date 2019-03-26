@@ -1,0 +1,89 @@
+<h4>Register a new coupon onto the website :</h4>
+
+<form class="CouponDetails" #formData="ngForm">
+
+<!-- Title -->
+  <div>
+      Coupon title : 
+  
+      <input #couponTitleData="ngModel" [(ngModel)]="title" name="title" required minlength="2" required maxlength="20"
+      placeholder="Coupon title...">
+      <span id="CouponTitleDataAssert" *ngIf="couponTitleData.errors?.minlength"> Title too short </span>
+  </div>
+
+  <br>
+<!-- Expiration date -->
+
+<div>
+  Expiration date : 
+
+  <input #expirationDateData="ngModel" [(ngModel)]="expirationDate" type="date" id="expirationDate" name="expirationDate"
+    min="2020-01-01" max="2030-01-01">
+
+</div>
+  
+  <br>
+
+<!-- Amount -->
+
+<div>
+    Amount : 
+
+    <input #couponAmountData="ngModel" [(ngModel)]="amount" name="amount"  type="number" placeholder="In stock..." min="1" max="9999">
+</div>
+
+<br>
+
+<!-- Coupon type -->
+
+<div>
+    Coupon type : 
+
+    <select #couponTypeData="ngModel" [(ngModel)]="type" name="type" required>
+        <option value="RESTRAUNT">Restraunt</option>
+        <option value="ELECTRICITY">Electricity</option>
+        <option value="VACATION">Vacation</option>
+        <option value="GIFT">Gift</option>
+        <option value="SUPERMARKET">Supermarket</option>
+        <option value="VIDEO">Video</option>
+        <option value="INTERNET">Internet</option>
+      </select>
+</div>
+
+<br>
+
+<!-- Coupon text -->
+
+<div>
+    Coupon text : 
+
+    <textarea #couponTextData="ngModel" [(ngModel)]="couponText" name="coupontext" required maxlength="50"
+    placeholder="Coupon text...">
+  </textarea>
+</div>
+
+<br>
+
+<!-- Coupon price -->
+
+<div>
+    Price : 
+
+    <input #couponAmountData="ngModel" [(ngModel)]="price" name="price"  type="number"  required min="0.09" required max="999.99">
+</div>
+
+<br>
+
+
+<!-- Coupon img url -->
+
+<div>
+    Coupon logo (IMG-URL) : 
+
+    <input #couponAmountData="ngModel" [(ngModel)]="imgURL" name="img">
+</div>
+
+<br>
+  
+  <button id="NewCouponButton" [disabled]="formData.form.invalid" (click)="createCoupon()">Create new coupon</button>
+  </form>

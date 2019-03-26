@@ -1,0 +1,39 @@
+.NoCompanyCouponsText {
+    background:lightgoldenrodyellow;
+    color:sienna;
+    padding:1px;
+    border-style: double;
+    border-color: sienna
+}
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+  }
+
+#CouponTable {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  }
+  
+  #CouponTable th {
+    border: 1px solid rgb(192, 192, 192);
+    padding: 1px;
+    background-color: #6bac7b;
+    color:white;
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    height: 50px;
+  }
+  
+  #CouponTable tr {
+    border: 1px solid rgb(194, 194, 194);
+    padding: 3px;
+    background-color: #ffffff; 
+    text-align: center;
+  }
+  
+  #CouponTable tr:nth-child(even){background-color: #f5f5f5;}
+

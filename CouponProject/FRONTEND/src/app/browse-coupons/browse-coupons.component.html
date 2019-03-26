@@ -1,0 +1,67 @@
+
+<div>
+  <p> Please enjoy browsing through our coupons offered by a variety of organizations.</p>
+
+  <input type="text" [(ngModel)]="title"/>
+  <button id="SearchButton" class="CouponNavigateButtons" (click)="getCoupon()">Search coupon</button>
+
+  <br>
+
+</div>
+
+<br>
+
+<div>
+    
+<select  [(ngModel)]="typeSelection">
+        <option value="GIFT">GIFT</option>
+        <option value="RESTRAUNT">RESTRAUNT</option>
+        <option value="ELECTRICITY">ELECTRICITY</option>
+        <option value="VACATION">VACATION</option>
+        <option value="SUPERMARKET">SUPERMARKET</option>
+        <option value="VIDEO">VIDEO</option>
+        <option value="INTERNET">INTERNET</option>
+    </select>
+    <button id="FilterButton" class="CouponNavigateButtons" (click)="getCouponsByType()">Filter</button>
+
+    <span id="VerticalLine1"></span>
+
+    <button id="AllCouponsButton" class="CouponNavigateButtons" (click)="getAllCoupons()">All</button>
+
+      <table id="CouponTable" class="table table-dark" border="1" *ngIf="this.coupons != undefined && this.coupons[0] != null" class="AllCouponsTable">
+              <tr>
+                  <th>Title</th>
+                  <th>Company</th>
+                  <th>Creation date</th>
+                  <th>Expiration date</th>
+                  <th>In-stock</th>
+                  <th>Type</th>
+                  <th>Text</th>
+                  <th>Logo</th>
+                  <th>Price</th>
+              </tr>
+
+              <tr *ngFor="let c of this.coupons">
+                <td>{{c.title}}</td>
+                <td>{{c.motherCompany}}</td>
+                <td>{{c.startDate}}</td>
+                <td>{{c.endDate}}</td>
+                <td>{{c.amount}}</td>
+                <td>{{c.type}}</td>
+                <td>{{c.message}}</td>
+                <td *ngIf="c.image != 'None'"><img src={{c.image}} width=100></td>
+                <td *ngIf="c.image == 'None'">No image</td>
+                <td>{{c.price}}$</td>
+                
+                <td><button id="BuyButton" [disabled]="this.compareDates(c.endDate) || c.amount == 0" (click)="purchaseCoupon(c)">Buy</button> </td>
+            </tr>
+      </table>
+
+      <br> 
+      <span id="NoTypeFound" *ngIf="this.coupons != undefined && this.coupons.length == 0">
+        <br>
+              <span id="NoTypeFoundText">Couldn't find any coupons of that type..</span>
+      </span>
+
+</div>
+

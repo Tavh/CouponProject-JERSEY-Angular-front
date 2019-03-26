@@ -1,0 +1,3 @@
+<app-main *ngIf='this.sessionUserDetailsWrapper.userDetails.loginStatus == "OK"'></app-main>
+
+<app-pre-login *ngIf='this.sessionUserDetailsWrapper.userDetails.loginStatus != "OK"'></app-pre-login>

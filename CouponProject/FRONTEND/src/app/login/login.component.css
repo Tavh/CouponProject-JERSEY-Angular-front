@@ -1,0 +1,44 @@
+.AssertionYellow {
+    background:lightgoldenrodyellow;
+    color:sienna;
+    padding:1px;
+}
+
+
+#ErrorMessage {
+    background:pink;
+    color:red;
+    padding:1px;
+    border-style: double;
+    border-color: brown
+}
+
+#LoginButton {
+    background-color: rgb(102, 102, 102);
+    color: white;
+    padding: 9px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#LoginButton:hover {
+    background-color: rgb(63, 63, 63);
+    color: white;
+    padding: 9px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#LoginButton:disabled {
+    background-color: rgb(160, 160, 160);
+    color: white;
+    padding: 9px;
+    font-size: 16px;
+    border: none;
+    cursor: context-menu;
+}
+
+
+

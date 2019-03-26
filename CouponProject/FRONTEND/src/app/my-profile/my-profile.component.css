@@ -1,0 +1,57 @@
+.PasswordShortAssert {
+    background:pink;
+    color:red;
+    padding:1px;
+}
+
+.NewPasswordShortAssert {
+    background:pink;
+    color:red;
+    padding:1px;
+}
+
+
+.ConfirmNewPasswordShortAssert {
+    background:pink;
+    color:red;
+    padding:1px;
+}
+
+.PasswordsDoNotMatch {
+    background:pink;
+    color:red;
+    padding:1px;
+    border-style: double;
+    border-color: brown
+}
+.NewPasswordSection {
+    border-style: dashed;
+    padding:3px;
+    border-color: black
+}
+
+#PasswordWrongError {
+    background:pink;
+    color:red;
+    padding:1px;
+    border-style: double;
+    border-color: brown
+}
+
+#UpdateButton {
+    background-color: rgb(63, 63, 63);
+    color: white;
+    padding: 9px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#UpdateButton:disabled {
+    background-color: rgb(126, 126, 126);
+    color: white;
+    padding: 9px;
+    font-size: 16px;
+    border: none;
+    cursor: context-menu;
+}

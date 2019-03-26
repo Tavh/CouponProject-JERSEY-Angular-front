@@ -1,0 +1,53 @@
+<div id="Page">
+
+    <h1 class="form-group display-4">Welcome!</h1>
+    
+
+ <!-- The form automatically navigates to "/home" in order to reset the SPA layout -->
+    <form class="LoginPage" #formData="ngForm" routerLink="/home">
+
+        <p class="form-group"> Please enter your user details : </p>
+
+        <span *ngIf="this.isDisplayErrorMessage.getBoolean()" > <span  id="ErrorMessage"> Either the username, password or user-type you inserted were incorrect </span> 
+        
+        <br> 
+        <br>
+
+        </span>
+        
+        <label>User type : </label>
+        <select #userType="ngModel" [(ngModel)]="userTypeSelection" name="selection" required>
+            <option value="company">Company</option>
+            <option value="customer">Customer</option>
+        </select>
+        <!-- <span class="AssertionYellow" id="UserTypeAssert" *ngIf="userType.errors?.required"> Please select your user type (Company/Customer)</span> -->
+
+        <br>
+        <br>
+
+        <div id="LoginDetails" *ngIf="this.userTypeSelection != undefined">
+                
+            <input *ngIf="this.userTypeSelection == 'customer'" #usernameData="ngModel" [(ngModel)]="username" name="email" required minlength="4" type="text" placeholder="Email..." >
+            <input *ngIf="this.userTypeSelection == 'company'" #usernameData="ngModel" [(ngModel)]="username" name="company-name" required minlength="4" type="text" placeholder="Company name..." >
+            <!-- <span  class="AssertionYellow" *ngIf="usernameData.errors?.required && this.userTypeSelection == 'customer'"> Please insert your email</span> -->
+            <!-- <span  class="AssertionYellow" *ngIf="usernameData.errors?.required && this.userTypeSelection == 'company'"> Please insert your company name</span> -->
+
+            <br>
+            <br>
+
+            <input #passwordData="ngModel" [(ngModel)]="password" name="password" required minlength="4" required maxlength="12"
+            type="password" placeholder="Password...">
+            <!-- <span  class="AssertionYellow" *ngIf="passwordData.errors?.required"> Please insert your password </span> -->
+
+            <br>
+            <br>
+
+        </div>
+
+        <button id="LoginButton" class="btn btn-primary" [disabled]="formData.form.invalid" (click)="login()">Log-in</button>
+
+    </form>
+
+</div>
+
+

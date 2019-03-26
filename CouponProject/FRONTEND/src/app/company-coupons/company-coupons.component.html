@@ -1,0 +1,40 @@
+
+<h4> Coupons registered by {{this.sessionUserDetailsWrapper.userDetails.username}} : </h4>
+
+<div>
+
+    <table id="CouponTable"  border="1"  class="CompanyCouponsTable" *ngIf="this.coupons != undefined">
+        <tr>
+            <th>Title</th>
+            <th>Company</th>
+            <th>Creation date</th>
+            <th>Expiration date</th>
+            <th>In-stock</th>
+            <th>Type</th>
+            <th>Text</th>
+            <th>Logo</th>
+            <th>Price</th>
+        </tr>
+      
+        <tr *ngFor="let c of this.coupons">
+          <td>{{c.title}}</td>
+          <td>{{c.motherCompany}}</td>
+          <td>{{c.startDate}}</td>
+          <td>{{c.endDate}}</td>
+          <td>{{c.amount}}</td>
+          <td>{{c.type}}</td>
+          <td>{{c.message}}</td>
+          <td *ngIf="c.image != 'None'"><img src={{c.image}} width=100></td>
+          <td *ngIf="c.image == 'None'">No image</td>
+          <td>{{c.price}}$</td>
+          
+      </tr>
+      </table>
+
+      <br>
+
+      <span class="NoCompanyCoupons" *ngIf="this.coupons != undefined && this.coupons.length == 0">
+        <span class="NoCompanyCouponsText">You have yet to register any coupons.</span>
+    </span>
+
+</div>

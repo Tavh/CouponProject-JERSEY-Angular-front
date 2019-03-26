@@ -1,0 +1,15 @@
+<button class="btn btn-primary" id="HomeButton" routerLink="/home">Home</button>
+
+<span id="VerticalLine1"></span>
+
+<div  id="DropDown">
+        <button class="btn btn-secondary dropdown-toggle" id="DropButton"> {{sessionUserDetailsWrapper.userDetails.username}}'s profile </button>
+            <div id="DropDownContent">
+                    <a routerLink="/my-profile">User details</a>
+                    <a routerLink="/company-coupons">Registered coupons</a>
+            </div>
+</div>
+
+<span id="VerticalLine2"></span>
+
+<button class="btn btn-primary" id="CreateCouponButton" routerLink="/create-coupon">New coupon</button>

@@ -1,0 +1,19 @@
+#LogoutButton {
+    
+    background-color: rgb(201, 90, 47);
+    color: white;
+    padding: 5spx;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+#LogoutButton:hover {
+    
+    background-color: rgb(145, 100, 82);
+    color: white;
+    padding: 5spx;
+    font-size: 12px;
+    border: nonse;
+    cursor: pointer;
+}

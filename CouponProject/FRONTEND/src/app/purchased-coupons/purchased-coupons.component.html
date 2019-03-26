@@ -1,0 +1,35 @@
+
+<h4> {{this.sessionUserDetailsWrapper.userDetails.username}}'s coupons : </h4>
+<div>
+
+    <table id="CouponTable" border="1"  class="PurchasedCouponsTable" *ngIf="this.coupons != undefined">
+        <tr>
+            <th>Title</th>
+            <th>Company</th>
+            <th>Expiration date</th>
+            <th>Type</th>
+            <th>Text</th>
+            <th>Logo</th>
+            <th>Price</th>
+        </tr>
+      
+        <tr *ngFor="let c of this.coupons">
+          <td>{{c.title}}</td>
+          <td>{{c.motherCompany}}</td>
+          <td>{{c.endDate}}</td>
+          <td>{{c.type}}</td>
+          <td>{{c.message}}</td>
+          <td *ngIf="c.image != 'None'"><img src={{c.image}} width=100></td>
+          <td *ngIf="c.image == 'None'">No image</td>
+          <td>{{c.price}}$</td>
+          
+      </tr>
+      </table>
+
+      <br>
+
+      <span id="NoCouponsPurchased" *ngIf="this.coupons != undefined && this.coupons.length == 0">
+        <span id="NoCouponsPurchasedText">You have yet to purchase any coupons.</span>
+    </span>
+
+</div>

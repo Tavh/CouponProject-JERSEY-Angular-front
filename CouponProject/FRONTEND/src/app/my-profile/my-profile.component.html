@@ -1,0 +1,67 @@
+<h3>Your user details :</h3>
+
+<div>
+
+  ID : <span id="Id">{{this.sessionUserDetailsWrapper.userDetails.id}}</span>
+  <br>
+  <br>
+  <span *ngIf="sessionUserDetailsWrapper.userDetails.userType == 'customer'">Name</span> 
+  <span *ngIf="sessionUserDetailsWrapper.userDetails.userType == 'company'">Company</span> 
+  
+  : <span id="Name">{{this.sessionUserDetailsWrapper.userDetails.username}}</span>
+  <br>
+  <br>
+  Email : <span id="Email">{{this.sessionUserDetailsWrapper.userDetails.email}}</span>
+  <br>
+  <br>
+</div>
+
+<h4>Update password :</h4>
+
+<div id="PasswordWrongError" *ngIf="this.isDisplayPasswordWrongError == true"> The password you inserted is incorrect</div>
+
+<form class="PasswordUpdate" #formData="ngForm">
+
+<div>
+    Your current password : 
+
+    <input #passwordData="ngModel" [(ngModel)]="currentPassword" name="password" required minlength="4" required maxlength="12"
+    type="password" placeholder="Current password">
+    <span class="PasswordShortAssert" *ngIf="passwordData.errors?.minlength"> Password too short. </span>
+</div>
+
+<br>
+
+<div class="NewPasswordSection"> 
+<br>
+    <div>
+        New password : 
+    
+        <input #NewpasswordData="ngModel" [(ngModel)]="newPassword" name="NewPassword" required minlength="4" required maxlength="12"
+        type="password" placeholder="New password">
+        <span class="NewPasswordShortAssert" *ngIf="NewpasswordData.errors?.minlength"> Password too short. </span>
+    </div>
+    
+    
+    <div>
+        Confirm new password : 
+    
+        <input #ConfirmNewpasswordData="ngModel" [(ngModel)]="confirmNewPassword" name="ConfirmNewPassword" required minlength="4" required maxlength="12"
+        type="password" placeholder="New password">
+        <span class="ConfirmNewPasswordShortAssert" *ngIf="ConfirmNewpasswordData.errors?.minlength"> Password too short. </span>
+    </div>
+    
+    <span class="PasswordsDoNotMatch" *ngIf="newPassword != confirmNewPassword"> 
+        Passwords do not match 
+    </span>
+
+<br>
+
+</div>
+
+<br>
+
+<button id="UpdateButton" class="btn btn-primary" [disabled]="formData.form.invalid || newPassword != confirmNewPassword" (click)="updateUserDetails()">Update</button>
+
+</form>
+

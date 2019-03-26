@@ -1,0 +1,69 @@
+
+<form class="RegistrationPage" #formData="ngForm">
+    <h3> Create a new account : </h3>
+
+<div id="TypeSelection">
+    <span>User type : </span>
+    <select  #userType="ngModel" [(ngModel)]="userTypeSelection" name="selection" required>
+        <option value="company">Company</option>
+        <option value="customer">Customer</option>
+    </select>
+</div>
+<span class="YellowAssertion" *ngIf="userType.errors?.required"> Please select a user type (Company/Customer)</span>
+
+    <br>
+
+<div class="registration-details" *ngIf="this.userTypeSelection != undefined"> 
+
+    <input id="UserInput" #usernameData="ngModel" [(ngModel)]="name" name="name" required minlength="4" type="text" placeholder="Name..." >
+    <span id="CheckAvailability" *ngIf="userTypeSelection == 'company'">
+        <button [disabled]="usernameData.errors?.minlength || usernameData.errors?.required" class="AvailabilityButtons" (click)="checkAvailability()">Check availability</button>
+    </span>
+
+    <br>
+
+    <span id="NameAssertion" class="YellowAssertion" *ngIf="usernameData.errors?.required && this.userTypeSelection == 'customer'"> Please insert your name</span>
+    <span id="NameAssertion" class="YellowAssertion" *ngIf="usernameData.errors?.required && this.userTypeSelection == 'company'"> Please insert your company's name</span>
+    <span class="RedAssertion" *ngIf="usernameData.errors?.minlength"> Name too short. </span>
+
+    <br>
+    <br>
+
+    <input #emailData="ngModel" [(ngModel)]="email" name="email" type="text" placeholder="Email..." required minlength="6">
+    <span id="CheckAvailability" *ngIf="userTypeSelection == 'customer'">
+            <button [disabled]="emailData.errors?.required || emailData.errors?.minlength" class="AvailabilityButtons" (click)="checkAvailability()">Check availability</button>
+    </span>
+
+    <br>
+
+    <span class="YellowAssertion" *ngIf="emailData.errors?.required"> Please insert your email address</span>
+
+    <br>
+    <br>
+            
+    <input #PasswordData="ngModel" [(ngModel)]="password" name="Password" id="Password" required minlength="4" required maxlength="12"
+    type="password" placeholder="Password...">
+
+    <br>
+
+    <span class="YellowAssertion" *ngIf="PasswordData.errors?.required"> Please insert password</span>
+    <span class="RedAssertion" *ngIf="PasswordData.errors?.minlength"> Password too short. </span> 
+
+    <br>
+    <br>
+
+    <input #ConfirmNewpasswordData="ngModel" [(ngModel)]="confirmNewPassword" name="ConfirmNewPassword" required minlength="4" required maxlength="12"
+    type="password" placeholder="Confirm password...">
+    
+    <br>
+
+    <span class="RedAssertion" *ngIf="password != confirmNewPassword"> Passwords do not match </span>
+
+    <br>
+</div>
+
+    <button id="SignUpButton" class="SignUpButtons" class="btn btn-primary"  [disabled]="formData.form.invalid" (click)="createUser()">Sign-up</button>
+
+</form>
+
+

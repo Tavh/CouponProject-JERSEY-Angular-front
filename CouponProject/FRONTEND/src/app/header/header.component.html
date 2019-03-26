@@ -1,0 +1,17 @@
+
+<h2>Welcome, <span class="UsernameDisplay">{{this.sessionUserDetailsWrapper.userDetails.username}}</span>!
+    <app-logout></app-logout>
+</h2>
+
+<br>
+
+<div *ngIf="this.sessionUserDetailsWrapper.userDetails.userType == 'customer'">
+    <app-customer-view></app-customer-view>
+</div>
+
+<div *ngIf="this.sessionUserDetailsWrapper.userDetails.userType == 'company'">
+    <app-company-view></app-company-view>
+</div>
+ 
+
+
