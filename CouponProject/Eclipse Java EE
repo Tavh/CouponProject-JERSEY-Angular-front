@@ -1,0 +1,2 @@
+2018-11-26 21:29:12,599  INFO [main] - com.tav.coupons.logger.MyLog4J.main 10 - Test message
+2018-11-26 21:29:46,969 DEBUG [main] - com.tav.coupons.logger.MyLog4J.main 10 - Test message

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_191">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.12.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/jackson-core-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/jackson-jaxrs-1.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/jackson-mapper-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/jackson-xc-1.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/jasper.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/jasper-el.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/jersey-client-1.14.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/jersey-core-1.14.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/jersey-json-1.14.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/jersey-multipart-1.14.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/jersey-server-1.14.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/jersey-servlet-1.14.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/jettison-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/JerseyLibrary/jsr311-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/junit/junit-4.11.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/Log4J/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="properties"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/Mockito/mockito-all-1.9.5.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/externaljars/junit-4.8.2.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/externaljars/property-util-1.6.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/externaljars/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="D:/Eclipse Java EE/javamail/javamail-1.4.7/mail.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
