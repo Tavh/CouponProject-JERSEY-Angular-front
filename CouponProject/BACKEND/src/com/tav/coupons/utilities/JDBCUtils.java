@@ -17,7 +17,7 @@ public class JDBCUtils {
 
 	public static Connection getConnection() throws SQLException {
 		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/coupons?useSSL=false&serverTimezone=UTC", "root",
-				"Srduicukzh1");
+				"");
 		return connection;
 	}
 
